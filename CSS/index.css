@@ -619,6 +619,9 @@ footer a{
         display: flex;
         flex-direction:column;
     }
+    .questions .questions_img{
+        display: none;
+    }
 
     .questions_img img{
         display: none;
