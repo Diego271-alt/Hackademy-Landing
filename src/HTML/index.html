@@ -98,7 +98,7 @@
                 <p>Envíanos tú correo electronico y nosotros nos pondremos en contacto contigo</p>
                 <form id="form" action="https://www.freecodecamp.com/email-submit">
                     <input name="email" id="email" type="email" placeholder="Envía tu email" required>
-                    <input id="submit" type="submit" value="Enviar" ></input>
+                    <input  id="submit" type="submit" value="Enviar" ></input>
     
                 </form>
             </div>
@@ -115,7 +115,18 @@
         <a href="#">Contácto</a>
 
     </footer>
-    <script src="../JS/main.js"></script>
+    <script>
+
+
+        const $form=document.querySelector('#form');
+        form.addEventListener('submit',(e) =>{
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            
+
+        })
+
+    </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 

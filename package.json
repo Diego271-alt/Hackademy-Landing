@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/Diego271-alt/Hackademy-Landing#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
   }
-
 }
