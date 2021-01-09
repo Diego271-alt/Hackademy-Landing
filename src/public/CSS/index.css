@@ -468,10 +468,51 @@ footer{
     height: 150px;
     border-top: 30px solid var(--secondary);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .fomulario{
+    width: 100%;
+    height:50%;
+  
+}
+
+.formulario h4{
+    color: white;
+}
+
+.datos input[type=submit]{
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+.datos button{
+
+    width: 120px;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 35px;
+    margin-left: 15px;
+    cursor: pointer;
+
+    position: relative;
+    outline: none;
+}
+
+footer .info-footer{
+    width: 100%;
+    height: 50%;
+    display: flex;
     justify-content: space-around;
     align-items: flex-end;
+
 }
-footer a{
+.info-footer a{
     margin-bottom: 10px;
     color: white;
     text-decoration: none;
@@ -849,4 +890,3 @@ footer a{
 
     
 }
-    

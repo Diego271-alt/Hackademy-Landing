@@ -110,23 +110,46 @@
         <div class="Overlay"></div>
     </div>
     <footer>
-        <a href="#">Ayuda</a>
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Contácto</a>
+        <div class="formulario">
+            <h4> Envía tu información</h4>
+            <form  class="datos" id="dataadmin" method="POST">
+                <input name="name" type="text" placeholder="Escribe tu nombre" required>
+                <input name="edad"  type="number" placeholder="Escribe tu Edad" required>
+                <input type="submit"></input>
+    
+            </form>
+        </div>
+        <div class="info-footer">
+            <a href="#">Ayuda</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Contácto</a>
+        </div>
+
+
 
     </footer>
     <script>
-
-
-        const $form=document.querySelector('#form');
-        form.addEventListener('submit',(e) =>{
-            e.preventDefault();
-            const formData = new FormData(e.currentTarget);
-            
+        const $form = document.querySelector('#dataadmin')
+        $form.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            const formulario= new FormData($form)
+                    
+                fetch('/', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                    user: {
+                        name: formulario.get('name'),
+                        email: formulario.get('edad')
+                    }
+                })
+            });
 
         })
-
     </script>
+    <script src="JS/main.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
