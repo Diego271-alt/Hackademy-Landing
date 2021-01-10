@@ -30,17 +30,13 @@ app.get('/',(req,res) =>{
 app.post('/',  function(request, response){
         
         //const res= await db.query(`INSERT INTO usuarios(nombre, edad) VALUES('${request.body.user.name}','${request.body.user.email}')`)
-        db.query('SELECT * FROM usuarios',(error,results)=>{
+        db.query(`INSERT INTO usuarios(nombre, edad) VALUES('${request.body.user.name}','${request.body.user.email}')`,(error,results)=>{
             if(error){
                 throw error
             }
-            response.status(200).json(results.rows)
-            console.log(results.rows)
+                response.status(200).json(results.rows)
+                
         })
- 
-
-
-
 });
 
 app.use(express.static(DRM .join(__dirname,'public')))

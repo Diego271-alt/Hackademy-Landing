@@ -107,18 +107,18 @@
     </div>
     <div class="mercedez">
 
-        <div class="Overlay"></div>
-    </div>
-    <footer>
         <div class="formulario">
-            <h4> Envía tu información</h4>
+            <h4>Participa en el sorteo</h4>
             <form  class="datos" id="dataadmin" method="POST">
-                <input name="name" type="text" placeholder="Escribe tu nombre" required>
-                <input name="edad"  type="number" placeholder="Escribe tu Edad" required>
-                <input type="submit"></input>
+                <input class="form-data" name="name" type="text" placeholder="Escribe tu nombre" required>
+                <input  class="form-data" name="edad"  type="number" placeholder="Escribe tu edad" required>
+                <input type="submit" class="form-submit"></input>
     
             </form>
         </div>
+    </div>
+    <footer>
+
         <div class="info-footer">
             <a href="#">Ayuda</a>
             <a href="#">Términos y condiciones</a>
@@ -133,7 +133,7 @@
         $form.addEventListener('submit',(event)=>{
             event.preventDefault();
             const formulario= new FormData($form)
-                    
+
                 fetch('/', {
                     method: 'POST',
                     headers: {
@@ -142,10 +142,13 @@
                     body: JSON.stringify({
                     user: {
                         name: formulario.get('name'),
-                        email: formulario.get('edad')
+                        email: parseInt(formulario.get('edad'))
                     }
                 })
+
             });
+            alert("has sido registrado con éxito")
+         
 
         })
     </script>

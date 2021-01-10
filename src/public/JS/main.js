@@ -58,9 +58,11 @@ const Product= ()=>{
     return view
 }
 
-console.log(Product())
 
 Products.innerHTML=Product();
+
+
+
 
 
 
