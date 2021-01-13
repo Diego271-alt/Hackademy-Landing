@@ -29,7 +29,7 @@ app.get('/',(req,res) =>{
 
 app.post('/',  function(request, response){
         
-        //const res= await db.query(`INSERT INTO usuarios(nombre, edad) VALUES('${request.body.user.name}','${request.body.user.email}')`)
+        //'SELECT FROM * usuarios'
         db.query(`INSERT INTO usuarios(nombre, edad) VALUES('${request.body.user.name}','${request.body.user.email}')`,(error,results)=>{
             if(error){
                 throw error
